@@ -7,7 +7,7 @@ class Player extends Component {
     return (
       <div className="d-flex flex-column align-items-center justify-content-center">
         <div className="thinking">
-          <img className="mt-3" height={75} src={this.props.mangChon.find((item) => item.banChon === true).hinhAnh} alt="" />
+          <img height={100} src={this.props.mangChon.find((item) => item.banChon === true).hinhAnh} alt="" />
         </div>
         <div className="speech-bubble"></div>
         <img width={250} height={250} src="./img/gameOanTuXi/player.png" alt="play.png" />

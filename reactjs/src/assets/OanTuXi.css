@@ -7,20 +7,24 @@
   font-family: fontGame;
 }
 @font-face {
-    font-family: 'fontGame';
-    src: url(../font/Pony.ttf);
+  font-family: "fontGame";
+  src: url(../font/Pony.ttf);
 }
 
 .thinking {
-    border: 5px solid #45d994;
-    width: 150px;
-    height: 150px;
-    background: #fff;
-    border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #45d994;
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .btnChon {
-    width: 80px;
-    height: 80px;
+  width: 80px;
+  height: 80px;
 }
 .speech-bubble {
   position: relative;

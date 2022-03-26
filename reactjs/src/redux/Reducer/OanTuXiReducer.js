@@ -1,8 +1,8 @@
 const stateGameDefault = {
   mangChon: [
-    { ma: "keo", hinhAnh: "./img/gameOanTuXi/keo.png", banChon: false },
-    { ma: "bua", hinhAnh: "./img/gameOanTuXi/bua.png", banChon: true },
-    { ma: "bao", hinhAnh: "./img/gameOanTuXi/bao.png", banChon: false },
+    { ma: "keo", hinhAnh: "./img/gameOanTuXi/keo.png", banChon: false }, //0
+    { ma: "bua", hinhAnh: "./img/gameOanTuXi/bua.png", banChon: true }, //1
+    { ma: "bao", hinhAnh: "./img/gameOanTuXi/bao.png", banChon: false }, //2
   ],
   ketQua: "I Love U 3000 !!!",
   soBanThang: 0,
@@ -36,6 +36,14 @@ const OanTuXiReducer = (state = stateGameDefault, action) => {
       state.mangChon = mangChonUpdate;
       console.log(action);
 
+      return { ...state };
+    }
+    case "RAN_DOM": {
+      let soNgauNhien = Math.floor(Math.random() * 3); //lấy ra con số ngẫu nhiên 0,1,2
+      let itemNgauNhien = state.mangChon[soNgauNhien]; // gán itemNgauNhien = với soNgauNhien của state
+      // console.log("soNgauNhien_itemNgauNhien", soNgauNhien, itemNgauNhien);
+      state.computer = itemNgauNhien; //
+      // console.log("random", action);
       return { ...state };
     }
     default:
