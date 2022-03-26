@@ -42,8 +42,12 @@ const mapDispatchToProps = (dispatch) => {
           type: "RAN_DOM",
         });
         count++;
-        if (count > 15) { //lớn hơn 10 thì dừng hàm interval
-          clearInterval(randomComputerItem); 
+        if (count > 15) {
+          //lớn hơn 10 thì dừng hàm interval
+          clearInterval(randomComputerItem);
+          dispatch({
+            type: "GAME_RULE",
+          });
         }
       }, 100);
     },
